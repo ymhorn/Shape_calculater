@@ -5,8 +5,10 @@ from Circle import Circle
 from Hexagon import Hexagon
 
 class Calculater(RightTriangle,Circle,Hexagon):
+    """All the methods of the shape calculater"""
     @staticmethod
     def shape():
+        """To receive a shape from the user"""
         shape = input("Pick a shape\n "
               "1. Rectangle\n"
               "2. Square\n"
@@ -70,6 +72,7 @@ class Calculater(RightTriangle,Circle,Hexagon):
             return Calculater.shape()
     @staticmethod
     def function(shape):
+        """To receive the type of function from the user"""
         options = input("What would you like to me to do:\n"
                         "1. print the area of the shape\n"
                         "2. print the circumference of the shape\n"

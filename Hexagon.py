@@ -2,6 +2,7 @@ from Square import Square
 import math
 
 class Hexagon(Square):
+    """A hexagon shape"""
     def __init__(self,side):
         super().__init__(side)
     def get_area(self):

@@ -1,6 +1,7 @@
 from Shape import Shape
 
 class Rectangle(Shape):
+    """A rectangle shape"""
     def __init__(self,length,width):
         super().__init__()
         self.length=length

@@ -2,6 +2,7 @@ from Rectangle import Rectangle
 import math
 
 class RightTriangle(Rectangle):
+    """A right-angled triangle shape"""
     def __init__(self,base,height):
         super().__init__(length = base,width = height)
         self.base = base
