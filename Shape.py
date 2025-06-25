@@ -1,6 +1,9 @@
+from abc import ABC, abstractmethod
 
-class Shape:
+class Shape(ABC):
     def get_area(self):
+        pass
+    def get_circumference(self):
         pass
     def __str__(self):
         return f"The shape is a {self.__class__.__name__}"

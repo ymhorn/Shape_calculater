@@ -1,10 +1,10 @@
 from Rectangle import Rectangle
 from Square import Square
-from Triangle import Triangle
+from Triangle import RightTriangle
 from Circle import Circle
 from Hexagon import Hexagon
 
-class Calculater(Triangle,Circle,Hexagon):
+class Calculater(RightTriangle,Circle,Hexagon):
     @staticmethod
     def shape():
         shape = input("Pick a shape\n "
@@ -48,7 +48,7 @@ class Calculater(Triangle,Circle,Hexagon):
                     break
                 except ValueError:
                     print("sorry we need a number")
-            return Triangle(base,height)
+            return RightTriangle(base,height)
         elif shape == "4":
             while True:
                 try:
@@ -72,21 +72,34 @@ class Calculater(Triangle,Circle,Hexagon):
     def function(shape):
         options = input("What would you like to me to do:\n"
                         "1. print the area of the shape\n"
-                        "2. print the type of shape\n"
-                        "3. Add it with the area of another shape\n"
-                        "4. Print a length of the shape\n")
+                        "2. print the circumference of the shape\n"
+                        "3. print the type of shape\n"
+                        "4. Add it with the area of another shape\n"
+                        "5. Print a length of the shape\n"
+                        "6. The difference between the shape and another shape\n"
+                        "7. Do you want to know if the shape is round?")
         if options == "1":
             print(shape.get_area())
             return
         elif options == "2":
-            print(str(shape))
+            print(shape.get_circumference())
             return
         elif options == "3":
+            print(str(shape))
+            return
+        elif options == "4":
             second_shape = Calculater.shape()
             print(shape + second_shape)
             return
-        elif options == "4":
+        elif options == "5":
             print(len(shape))
+            return
+        elif options == "6":
+            second_shape = Calculater.shape()
+            print(shape - second_shape)
+            return
+        elif options == "7":
+            print(round(shape))
             return
         else:
             print("invalid option please try again")
