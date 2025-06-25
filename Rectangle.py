@@ -10,3 +10,4 @@ class Rectangle(Shape):
 if __name__=="__main__":
     b = Rectangle(10,15)
     print(b.get_area())
+    print(str(b))
