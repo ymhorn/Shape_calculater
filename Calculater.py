@@ -73,7 +73,8 @@ class Calculater(Triangle,Circle,Hexagon):
         options = input("What would you like to me to do:\n"
                         "1. print the area of the shape\n"
                         "2. print the type of shape\n"
-                        "3. Add it with the area of another shape\n")
+                        "3. Add it with the area of another shape\n"
+                        "4. Print a length of the shape\n")
         if options == "1":
             print(shape.get_area())
             return
@@ -83,6 +84,9 @@ class Calculater(Triangle,Circle,Hexagon):
         elif options == "3":
             second_shape = Calculater.shape()
             print(shape + second_shape)
+            return
+        elif options == "4":
+            print(len(shape))
             return
         else:
             print("invalid option please try again")
