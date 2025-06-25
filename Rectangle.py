@@ -7,6 +7,7 @@ class Rectangle(Shape):
         self.width = width
     def get_area(self):
             return self.length * self.width
+
 if __name__=="__main__":
     b = Rectangle(10,15)
     print(b.get_area())
